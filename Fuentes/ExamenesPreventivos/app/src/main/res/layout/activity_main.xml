@@ -13,23 +13,61 @@
         android:layout_marginTop="@dimen/margin_top"
         android:layout_marginBottom="@dimen/margin_bottom"
         android:layout_gravity="center_horizontal"
-        android:layout_width="100dp"
-        android:layout_height="100dp">
+        android:layout_width="120dp"
+        android:layout_height="120dp">
     </ImageView>
 
     <TextView
         android:text="Nombre"
         android:textSize="@dimen/tamanio_letra_menu"
+        android:paddingLeft="20dp"
         android:textColor="@color/colorAccent"
         android:layout_margin="@dimen/distancia"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
     </TextView>
+
+    <EditText
+        android:layout_gravity="center_horizontal"
+        android:background="@color/colorAccent"
+        android:hint="Ingrese su Rut"
+        android:textSize="@dimen/tamanio_letra_editor"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content">
+    </EditText>
+
     <TextView
         android:text="Password"
         android:textSize="@dimen/tamanio_letra_menu"
+        android:paddingLeft="20dp"
         android:textColor="@color/colorAccent"
         android:layout_margin="@dimen/distancia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </TextView>
+
+    <EditText
+        android:layout_gravity="center_horizontal"
+        android:background="@color/colorAccent"
+        android:hint="Ingrese Contraseña"
+        android:textSize="@dimen/tamanio_letra_editor"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content">
+    </EditText>
+    <Button
+        android:text="Iniciar Sesión"
+        android:layout_marginTop="@dimen/margin_top"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content">
+    </Button>
+
+    <TextView
+        android:textColor="@color/colorAccent"
+        android:textSize="10dp"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="150dp"
+        android:text="REGISTROS DE EXAMENES PREVENTIVOS 'COVID' "
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
     </TextView>
