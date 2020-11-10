@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="tamanio_letra_menu">26dp</dimen>
+    <dimen name="tamanio_letra_menu">22dp</dimen>
     <dimen name="tamanio_letra_editor">20dp</dimen>
     <dimen name="distancia">10dp</dimen>
     <dimen name="margin_top">40dp</dimen>

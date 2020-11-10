@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:gravity="center_horizontal"
     android:background="@color/colorPrimary"
     tools:context=".MainActivity">
 
@@ -12,53 +13,57 @@
         android:src="@drawable/ic_test"
         android:layout_marginTop="@dimen/margin_top"
         android:layout_marginBottom="@dimen/margin_bottom"
-        android:layout_gravity="center_horizontal"
         android:layout_width="120dp"
         android:layout_height="120dp">
     </ImageView>
 
     <TextView
-        android:text="Nombre"
+        android:text="Usuario"
         android:textSize="@dimen/tamanio_letra_menu"
-        android:paddingLeft="20dp"
-        android:textColor="@color/colorAccent"
+        android:textColor="@color/colorWhiteSnow"
         android:layout_margin="@dimen/distancia"
-        android:layout_width="match_parent"
+        android:layout_width="320dp"
         android:layout_height="wrap_content">
     </TextView>
-
     <EditText
-        android:layout_gravity="center_horizontal"
-        android:background="@color/colorAccent"
-        android:hint="Ingrese su Rut"
+        android:textColor="@color/colorBlack"
         android:textSize="@dimen/tamanio_letra_editor"
+        android:hint="Ingrese su Rut"
+        android:textColorHint="@color/colorAccent"
+        android:background="@drawable/fondo_white"
+        android:drawableLeft="@drawable/ic_usuario_svg"
+        android:paddingLeft="10dp"
         android:layout_width="330dp"
-        android:layout_height="wrap_content">
+        android:layout_height="40dp">
     </EditText>
 
     <TextView
-        android:text="Password"
+        android:text="Contraseña"
         android:textSize="@dimen/tamanio_letra_menu"
-        android:paddingLeft="20dp"
-        android:textColor="@color/colorAccent"
+        android:textColor="@color/colorWhiteSnow"
         android:layout_margin="@dimen/distancia"
-        android:layout_width="match_parent"
+        android:layout_width="320dp"
         android:layout_height="wrap_content">
     </TextView>
-
     <EditText
-        android:layout_gravity="center_horizontal"
-        android:background="@color/colorAccent"
-        android:hint="Ingrese Contraseña"
+        android:textColor="@color/colorBlack"
         android:textSize="@dimen/tamanio_letra_editor"
+        android:hint="Ingrese Contraseña"
+        android:textColorHint="@color/colorAccent"
+        android:background="@drawable/fondo_white"
+        android:drawableLeft="@drawable/ic_password_svg"
+        android:paddingLeft="10dp"
+        android:inputType="textPassword"
         android:layout_width="330dp"
-        android:layout_height="wrap_content">
+        android:layout_height="40dp">
     </EditText>
     <Button
         android:text="Iniciar Sesión"
+        android:background="@drawable/fondo_buttom"
         android:layout_marginTop="@dimen/margin_top"
         android:layout_gravity="center_horizontal"
-        android:layout_width="350dp"
+        android:textAllCaps="false"
+        android:layout_width="340dp"
         android:layout_height="wrap_content">
     </Button>
 
@@ -67,7 +72,7 @@
         android:textSize="10dp"
         android:gravity="center_horizontal"
         android:layout_marginTop="150dp"
-        android:text="REGISTROS DE EXAMENES PREVENTIVOS 'COVID' "
+        android:text="REGISTRO DE EXAMENES PREVENTIVOS 'COVID' "
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
     </TextView>
