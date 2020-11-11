@@ -9,6 +9,17 @@
 
     <include layout="@layout/toolbar"></include>
 
+    <TextView
+        android:gravity="center"
+        android:text="Agregar Paciente"
+        android:textSize="@dimen/tamanio_letra_editor"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:background="@color/colorPrimaryBlue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </TextView>
+
     <ListView
         android:id="@+id/pacientes_lv"
         android:layout_width="match_parent"
