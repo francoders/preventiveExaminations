@@ -7,12 +7,12 @@
     android:orientation="vertical"
     tools:context=".PrincipalActivity">
 
-    <TextView
-        android:text="Agregar un Paciente"
-        android:gravity="center_horizontal"
-        android:textSize="@dimen/tamanio_letra_menu"
+    <include layout="@layout/toolbar"></include>
+
+    <ListView
+        android:id="@+id/pacientes_lv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-    </TextView>
+    </ListView>
 
 </LinearLayout>
