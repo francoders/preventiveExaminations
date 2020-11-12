@@ -19,6 +19,7 @@
             android:src="@drawable/ic_icon"
             android:layout_marginTop="4dp"
             android:layout_marginBottom="4dp"
+            android:layout_marginRight="13dp"
             android:layout_width="85dp"
             android:layout_height="80dp">
         </ImageView>
