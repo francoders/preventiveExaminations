@@ -2,15 +2,16 @@ package cl.inacap.examenespreventivos.dto;
 
 public class Paciente {
 
-    private String rut; //String por el guion
+    private String rut; //String
     private String nombre;
     private String apellido;
-    private int fechaExamen;
-    private int areaTrabajo;
-    private boolean sintama;
-    private int temperatura;
-    private boolean presentaTos;
+    private String fechaExamen;
+    private String areaTrabajo;
+    private String sintama;
+    private float temperatura;
+    private String presentaTos;
     private int presionArterial;
+    private int id;
 
     public String getRut() {
         return rut;
@@ -36,43 +37,43 @@ public class Paciente {
         this.apellido = apellido;
     }
 
-    public int getFechaExamen() {
+    public String getFechaExamen() {
         return fechaExamen;
     }
 
-    public void setFechaExamen(int fechaExamen) {
+    public void setFechaExamen(String fechaExamen) {
         this.fechaExamen = fechaExamen;
     }
 
-    public int getAreaTrabajo() {
+    public String getAreaTrabajo() {
         return areaTrabajo;
     }
 
-    public void setAreaTrabajo(int areaTrabajo) {
+    public void setAreaTrabajo(String areaTrabajo) {
         this.areaTrabajo = areaTrabajo;
     }
 
-    public boolean isSintama() {
+    public String getSintama() {
         return sintama;
     }
 
-    public void setSintama(boolean sintama) {
+    public void setSintama(String sintama) {
         this.sintama = sintama;
     }
 
-    public int getTemperatura() {
+    public float getTemperatura() {
         return temperatura;
     }
 
-    public void setTemperatura(int temperatura) {
+    public void setTemperatura(float temperatura) {
         this.temperatura = temperatura;
     }
 
-    public boolean isPresentaTos() {
+    public String getPresentaTos() {
         return presentaTos;
     }
 
-    public void setPresentaTos(boolean presentaTos) {
+    public void setPresentaTos(String presentaTos) {
         this.presentaTos = presentaTos;
     }
 
@@ -82,5 +83,13 @@ public class Paciente {
 
     public void setPresionArterial(int presionArterial) {
         this.presionArterial = presionArterial;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

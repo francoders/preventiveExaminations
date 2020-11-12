@@ -28,14 +28,14 @@
     <EditText
         android:id="@+id/rut_text"
         android:textColor="@color/colorBlack"
-        android:textSize="@dimen/tamanio_letra_editor"
-        android:hint="Ingrese su Rut"
+        android:textSize="@dimen/tamanio_hint"
+        android:hint="Ingrese nombre de usuario"
         android:textColorHint="@color/colorAccent"
         android:background="@drawable/fondo_white"
         android:drawableLeft="@drawable/ic_usuario_svg"
         android:drawablePadding="10dp"
         android:paddingLeft="@dimen/margen_left_icon"
-        android:layout_width="330dp"
+        android:layout_width="@dimen/largo_texto"
         android:layout_height="40dp">
     </EditText>
 
@@ -50,7 +50,7 @@
     <EditText
         android:id="@+id/contrasena_text"
         android:textColor="@color/colorBlack"
-        android:textSize="@dimen/tamanio_letra_editor"
+        android:textSize="@dimen/tamanio_hint"
         android:hint="Ingrese Contraseña"
         android:textColorHint="@color/colorAccent"
         android:background="@drawable/fondo_white"
@@ -58,7 +58,7 @@
         android:drawablePadding="10dp"
         android:paddingLeft="@dimen/margen_left_icon"
         android:inputType="textPassword"
-        android:layout_width="330dp"
+        android:layout_width="@dimen/largo_texto"
         android:layout_height="40dp">
     </EditText>
     <Button
@@ -68,7 +68,7 @@
         android:layout_marginTop="@dimen/margin_top"
         android:layout_gravity="center_horizontal"
         android:textAllCaps="false"
-        android:layout_width="340dp"
+        android:layout_width="@dimen/largo_texto"
         android:layout_height="wrap_content">
     </Button>
 

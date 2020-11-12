@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(MainActivity.this, "Nombre de Usuario invalido", Toast.LENGTH_SHORT).show();
                     }
 
-                    //Cantidad
+                    // Cantidad.
                     if (!rut.isEmpty()){
                         if (rut.length() == 9 ){
                             if (contrasena.equals(rut.substring(3,7))){
@@ -57,11 +57,11 @@ public class MainActivity extends AppCompatActivity {
                         }
                     }
                 }catch(Exception ex){
+
                 }
             }
         });
     }
-
 
     public static Boolean rutValido(String rut) {
         Pattern pattern = Pattern.compile("^[0-9]+-[0-9kK]{1}$");

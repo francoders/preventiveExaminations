@@ -23,6 +23,7 @@ public class PrincipalActivity extends AppCompatActivity {
 
     private ListView pacientesLv; //LV
     private List<Paciente> pacientes;
+    private Toolbar toolbar;
     private PacientesArrayAdapter adaptador;
     private PacientesDAO pacientesDAO = PacientesDAOLista.getInstance();
     private ImageView agregarPaciente;
@@ -32,6 +33,8 @@ public class PrincipalActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_principal);
         pacientes = pacientesDAO.getAll();
+        this.toolbar = findViewById(R.id.toolbar);
+        this.setSupportActionBar(this.toolbar);
         adaptador = new PacientesArrayAdapter(this, R.layout.pacientes_list, pacientes);
         pacientesLv = findViewById(R.id.pacientes_lv);
         pacientesLv.setAdapter(adaptador);

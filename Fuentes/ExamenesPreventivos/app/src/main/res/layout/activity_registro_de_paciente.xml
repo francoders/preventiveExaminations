@@ -7,12 +7,67 @@
     android:orientation="vertical"
     tools:context=".RegistroDePacienteActivity">
 
+    <include layout="@layout/toolbar"></include>
+
     <TextView
+        android:background="@color/colorPrimaryBlue"
         android:gravity="center"
         android:textSize="@dimen/tamanio_letra_editor"
         android:text="Registro de Paciente"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
     </TextView>
+
+    <EditText
+        android:layout_margin="@dimen/distancia"
+        android:hint="Ingrese rut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </EditText>
+
+    <EditText
+        android:layout_margin="@dimen/distancia"
+        android:hint="Ingrese Nombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </EditText>
+
+    <EditText
+        android:layout_margin="@dimen/distancia"
+        android:hint="Ingrese Apellido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </EditText>
+
+    <Button
+        android:layout_margin="@dimen/distancia"
+        android:text="Fecha del Examen"
+        android:layout_gravity="center"
+        android:background="@drawable/fondo_buttom"
+        android:layout_width="@dimen/largo_texto"
+        android:layout_height="wrap_content">
+    </Button>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_margin="@dimen/distancia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Area de Trabajo"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </TextView>
+        <Spinner
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </Spinner>
+    </LinearLayout>
+
+
+
+
 
 </LinearLayout>
