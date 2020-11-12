@@ -15,7 +15,7 @@ public class PacientesSQLiteHelper extends SQLiteOpenHelper {
             ",fechaExamen TEXT" +
             ",areaTrabajo TEXT" +
             ",sintoma TEXT" +
-            "temperatura REAL" +
+            ",temperatura REAL" +
             ",presentaTos TEXT" +
             ",presionArterial INTEGER)";
 
@@ -24,14 +24,14 @@ public class PacientesSQLiteHelper extends SQLiteOpenHelper {
         super(context, name, factory, version);
     }
 
-    //1
     @Override
-    public void onCreate(SQLiteDatabase db) {
-
+    public void onCreate(SQLiteDatabase sqLiteDatabase) {
+        sqLiteDatabase.execSQL(this.sqlCreate);
     }
 
     @Override
-    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
+    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
+        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS pacientes");
+        sqLiteDatabase.execSQL(sqlCreate);
     }
 }

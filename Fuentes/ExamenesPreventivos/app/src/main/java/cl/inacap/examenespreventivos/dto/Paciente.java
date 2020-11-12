@@ -1,7 +1,10 @@
 package cl.inacap.examenespreventivos.dto;
 
-public class Paciente {
+import java.io.Serializable;
 
+public class Paciente implements Serializable {
+
+    private int id;
     private String rut; //String
     private String nombre;
     private String apellido;
@@ -11,7 +14,14 @@ public class Paciente {
     private float temperatura;
     private String presentaTos;
     private int presionArterial;
-    private int id;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getRut() {
         return rut;
@@ -83,13 +93,5 @@ public class Paciente {
 
     public void setPresionArterial(int presionArterial) {
         this.presionArterial = presionArterial;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 }

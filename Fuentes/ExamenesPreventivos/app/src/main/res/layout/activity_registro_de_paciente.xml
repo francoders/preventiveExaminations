@@ -19,6 +19,7 @@
     </TextView>
 
     <EditText
+        android:id="@+id/reg_rutTxt"
         android:layout_margin="@dimen/distancia"
         android:hint="Ingrese rut"
         android:layout_width="match_parent"
@@ -26,6 +27,7 @@
     </EditText>
 
     <EditText
+        android:id="@+id/reg_nombreTxt"
         android:layout_margin="@dimen/distancia"
         android:hint="Ingrese Nombre"
         android:layout_width="match_parent"
@@ -33,6 +35,7 @@
     </EditText>
 
     <EditText
+        android:id="@+id/reg_apellidoTxt"
         android:layout_margin="@dimen/distancia"
         android:hint="Ingrese Apellido"
         android:layout_width="match_parent"
@@ -40,6 +43,7 @@
     </EditText>
 
     <Button
+        android:id="@+id/reg_calendarioBtn"
         android:layout_margin="@dimen/distancia"
         android:text="Fecha del Examen"
         android:layout_gravity="center"
@@ -50,21 +54,98 @@
 
     <LinearLayout
         android:orientation="horizontal"
-        android:layout_margin="@dimen/distancia"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
+            android:layout_margin="@dimen/distancia"
             android:text="Area de Trabajo"
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
         </TextView>
         <Spinner
+            android:id="@+id/reg_areaTrabajoSp"
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
         </Spinner>
     </LinearLayout>
+    <LinearLayout
+        android:layout_margin="@dimen/distancia"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_weight="1"
+            android:text="Paciente Presenta Sintomas?"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </TextView>
+
+        <Switch
+            android:layout_weight="1"
+            android:id="@+id/reg_sintomaSw"
+            android:textOff="No"
+            android:textOn="Si"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </Switch>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_margin="@dimen/distancia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_weight="1"
+            android:hint="Presenta Tos?"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </TextView>
+        <Switch
+            android:layout_weight="1"
+            android:id="@+id/reg_presentaTosSw"
+            android:textOff="No"
+            android:textOn="Si"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </Switch>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_margin="@dimen/distancia"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/reg_temperaturaTxt"
+            android:layout_weight="1"
+            android:hint="Ingrese Temperaruta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </EditText>
+        <EditText
+            android:id="@+id/reg_presionArterialTxt"
+            android:layout_weight="1"
+            android:hint="Presion Arterial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </EditText>
+    </LinearLayout>
+
+    <Button
+        android:layout_margin="@dimen/distancia"
+        android:layout_gravity="center"
+        android:background="@drawable/fondo_buttom"
+        android:text="Ingresar Paciente"
+        android:layout_width="@dimen/largo_texto"
+        android:layout_height="wrap_content">
+    </Button>
+
+
+
+
+
 
 
 

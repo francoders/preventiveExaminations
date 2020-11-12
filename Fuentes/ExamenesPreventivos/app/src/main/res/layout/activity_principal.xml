@@ -9,34 +9,17 @@
 
     <include layout="@layout/toolbar"></include>
 
-    <LinearLayout
-        android:orientation="horizontal"
+    <TextView
+        android:gravity="center"
+        android:text="Pacientes Agregados"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/tamanio_letra_editor"
+        android:paddingTop="9dp"
+        android:paddingBottom="8dp"
+        android:background="@color/colorPrimaryBlue"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-
-        <TextView
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="Pacientes Agregados"
-            android:textSize="@dimen/tamanio_letra_editor"
-            android:paddingTop="8dp"
-            android:paddingBottom="8dp"
-            android:background="@color/colorPrimaryBlue"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-        </TextView>
-
-        <ImageView
-            android:id="@+id/agregar_paciente"
-            android:background="@color/colorPrimaryBlue"
-            android:layout_weight="3"
-            android:paddingTop="2dp"
-            android:paddingBottom="2dp"
-            android:src="@drawable/ic_anadir_svg"
-            android:layout_width="200dp"
-            android:layout_height="43dp">
-        </ImageView>
-    </LinearLayout>
+    </TextView>
 
     <ListView
         android:id="@+id/pacientes_lv"
@@ -44,4 +27,13 @@
         android:layout_height="wrap_content">
     </ListView>
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:background="@color/colorPrimaryBlue"
+        android:layout_margin="10dp"
+        android:id="@+id/agregarBtnFloat"
+        android:src="@drawable/ic_anadir_svg">
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
 </LinearLayout>
