@@ -19,6 +19,7 @@
     </TextView>
 
     <EditText
+        android:textSize="@dimen/tamanio_hint"
         android:id="@+id/reg_rutTxt"
         android:layout_margin="@dimen/distancia"
         android:hint="Ingrese rut"
@@ -27,6 +28,7 @@
     </EditText>
 
     <EditText
+        android:textSize="@dimen/tamanio_hint"
         android:id="@+id/reg_nombreTxt"
         android:layout_margin="@dimen/distancia"
         android:hint="Ingrese Nombre"
@@ -36,6 +38,7 @@
 
     <EditText
         android:id="@+id/reg_apellidoTxt"
+        android:textSize="@dimen/tamanio_hint"
         android:layout_margin="@dimen/distancia"
         android:hint="Ingrese Apellido"
         android:layout_width="match_parent"
@@ -46,24 +49,27 @@
         android:id="@+id/reg_calendarioBtn"
         android:layout_margin="@dimen/distancia"
         android:text="Fecha del Examen"
+        android:textAllCaps="false"
         android:layout_gravity="center"
         android:background="@drawable/fondo_buttom"
         android:layout_width="@dimen/largo_texto"
-        android:layout_height="wrap_content">
+        android:layout_height="41dp">
     </Button>
 
     <LinearLayout
+        android:layout_margin="@dimen/distancia"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
-            android:layout_margin="@dimen/distancia"
+            android:textSize="@dimen/tamanio_hint"
             android:text="Area de Trabajo"
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
         </TextView>
         <Spinner
+            android:textSize="@dimen/tamanio_hint"
             android:id="@+id/reg_areaTrabajoSp"
             android:layout_weight="1"
             android:layout_width="match_parent"
@@ -76,6 +82,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
+            android:textSize="@dimen/tamanio_hint"
             android:layout_weight="1"
             android:text="Paciente Presenta Sintomas?"
             android:layout_width="match_parent"
@@ -83,7 +90,7 @@
         </TextView>
 
         <Switch
-            android:layout_weight="1"
+            android:layout_weight="2"
             android:id="@+id/reg_sintomaSw"
             android:textOff="No"
             android:textOn="Si"
@@ -97,13 +104,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/tamanio_hint"
             android:layout_weight="1"
             android:hint="Presenta Tos?"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
         </TextView>
         <Switch
-            android:layout_weight="1"
+            android:layout_weight="2"
             android:id="@+id/reg_presentaTosSw"
             android:textOff="No"
             android:textOn="Si"
@@ -113,18 +122,21 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_margin="@dimen/distancia"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <EditText
+            android:layout_margin="@dimen/distancia"
             android:id="@+id/reg_temperaturaTxt"
+            android:textSize="@dimen/tamanio_hint"
             android:layout_weight="1"
             android:hint="Ingrese Temperaruta"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
         </EditText>
         <EditText
+            android:textSize="@dimen/tamanio_hint"
+            android:layout_margin="@dimen/distancia"
             android:id="@+id/reg_presionArterialTxt"
             android:layout_weight="1"
             android:hint="Presion Arterial"
@@ -134,21 +146,14 @@
     </LinearLayout>
 
     <Button
+        android:id="@+id/crear_btn"
         android:layout_margin="@dimen/distancia"
         android:layout_gravity="center"
         android:background="@drawable/fondo_buttom"
         android:text="Ingresar Paciente"
+        android:textAllCaps="false"
         android:layout_width="@dimen/largo_texto"
-        android:layout_height="wrap_content">
+        android:layout_height="41dp">
     </Button>
-
-
-
-
-
-
-
-
-
 
 </LinearLayout>

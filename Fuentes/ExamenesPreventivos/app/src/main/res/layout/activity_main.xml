@@ -40,7 +40,7 @@
     </EditText>
 
     <TextView
-        android:text="ContraseñaText"
+        android:text="Contraseña"
         android:textSize="@dimen/tamanio_letra_menu"
         android:textColor="@color/colorWhiteSnow"
         android:layout_margin="@dimen/distancia"
@@ -78,6 +78,14 @@
         android:gravity="center_horizontal"
         android:layout_marginTop="150dp"
         android:text="REGISTRO DE EXAMENES PREVENTIVOS 'COVID' "
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </TextView>
+    <TextView
+        android:textColor="@color/colorAccent"
+        android:textSize="10dp"
+        android:gravity="center_horizontal"
+        android:text="®Corvalán"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
     </TextView>

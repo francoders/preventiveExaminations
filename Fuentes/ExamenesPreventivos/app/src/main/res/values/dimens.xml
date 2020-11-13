@@ -6,6 +6,6 @@
     <dimen name="margin_top">50dp</dimen>
     <dimen name="margin_bottom">20dp</dimen>
     <dimen name="margen_left_icon">10dp</dimen>
-    <dimen name="tamanio_hint">15dp</dimen>
+    <dimen name="tamanio_hint">16dp</dimen>
     <dimen name="largo_texto">330dp</dimen>
 </resources>

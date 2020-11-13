@@ -5,10 +5,8 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.service.controls.actions.FloatAction;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -21,7 +19,6 @@ import cl.inacap.examenespreventivos.dao.PacientesDAO;
 import cl.inacap.examenespreventivos.dao.PacientesDAOSQLite;
 import cl.inacap.examenespreventivos.dto.Paciente;
 
-
 public class PrincipalActivity extends AppCompatActivity {
 
     private FloatingActionButton agregarPacienteBtn;
@@ -30,6 +27,7 @@ public class PrincipalActivity extends AppCompatActivity {
     private List<Paciente> pacientes;
     private PacientesArrayAdapter adaptador;
     private PacientesDAO pacientesDAO = new PacientesDAOSQLite(this);
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
