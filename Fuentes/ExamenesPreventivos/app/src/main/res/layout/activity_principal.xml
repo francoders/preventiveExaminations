@@ -22,6 +22,7 @@
     </TextView>
 
     <ListView
+        android:background="@color/colorWhiteSnow"
         android:id="@+id/pacientes_lv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -32,7 +33,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom"
         android:background="@color/colorPrimaryBlue"
-        android:layout_margin="10dp"
+        android:layout_margin="30dp"
         android:id="@+id/agregarBtnFloat"
         android:src="@drawable/ic_anadir_svg">
     </com.google.android.material.floatingactionbutton.FloatingActionButton>

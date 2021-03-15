@@ -46,7 +46,7 @@
     </EditText>
 
     <Button
-        android:id="@+id/reg_calendarioBtn"
+        android:id="@+id/calendarioBtn"
         android:layout_margin="@dimen/distancia"
         android:text="Fecha del Examen"
         android:textAllCaps="false"

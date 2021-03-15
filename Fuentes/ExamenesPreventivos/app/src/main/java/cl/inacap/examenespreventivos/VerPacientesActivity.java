@@ -14,7 +14,7 @@ public class VerPacientesActivity extends AppCompatActivity {
     private TextView rut_paciente;
     private TextView nombre_paciente;
     private TextView apellido_paciente;
-    private TextView calendario_paciente;
+    private TextView calendario_registro;
     private TextView areaTrabajo_paciente;
     private TextView sintoma_paciente;
     private TextView temperatura_paciente;
@@ -36,7 +36,7 @@ public class VerPacientesActivity extends AppCompatActivity {
         this.nombre_paciente = findViewById(R.id.nombrePaciente);
         this.apellido_paciente = findViewById(R.id.apellidoPaciente);
         this.rut_paciente = findViewById(R.id.rutPaciente);
-        this.calendario_paciente = findViewById(R.id.calendarioPaciente);
+        this.calendario_registro = findViewById(R.id.calendarioPaciente);
         this.presionArterial_paciente = findViewById(R.id.presionArterialPaciente);
         this.presentaTos_paciente = findViewById(R.id.presentaTosPaciente);
         this.sintoma_paciente = findViewById(R.id.sintomaPaciente);
@@ -52,7 +52,7 @@ public class VerPacientesActivity extends AppCompatActivity {
             this.rut_paciente.setText(paciente.getRut());
             this.nombre_paciente.setText(paciente.getNombre());
             this.apellido_paciente.setText(paciente.getApellido());
-            this.calendario_paciente.setText(paciente.getFechaExamen());
+            this.calendario_registro.setText(paciente.getFechaExamen());
             this.sintoma_paciente.setText(paciente.getSintama());
             this.presionArterial_paciente.setText(""+paciente.getPresionArterial());
             this.temperatura_paciente.setText(""+paciente.getTemperatura());

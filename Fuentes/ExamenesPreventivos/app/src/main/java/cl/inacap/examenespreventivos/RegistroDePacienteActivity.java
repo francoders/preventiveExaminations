@@ -15,6 +15,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Switch;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
@@ -34,8 +35,8 @@ public class RegistroDePacienteActivity extends AppCompatActivity {
     private EditText rut_paciente;
     private EditText nombre_paciente;
     private EditText apellido_paciente;
-    private Button calendario_paciente;
-    private int dia,mes,ano;
+    private Button calendarioBtn;
+    private int dia,mes,anio;
     private Spinner areaTrabajo_paciente;
     private Switch sintoma_paciente;
     private EditText temperatura_paciente;
@@ -59,13 +60,11 @@ public class RegistroDePacienteActivity extends AppCompatActivity {
         this.rut_paciente = findViewById(R.id.reg_rutTxt);
         this.nombre_paciente = findViewById(R.id.reg_nombreTxt);
         this.apellido_paciente = findViewById(R.id.reg_apellidoTxt);
-        this.calendario_paciente = findViewById(R.id.reg_calendarioBtn);
         this.areaTrabajo_paciente = findViewById(R.id.reg_areaTrabajoSp);
         this.sintoma_paciente = findViewById(R.id.reg_sintomaSw);
         this.temperatura_paciente = findViewById(R.id.reg_temperaturaTxt);
         this.presentaTos_paciente = findViewById(R.id.reg_presentaTosSw);
         this.presionArterial_paciente = findViewById(R.id.reg_presionArterialTxt);
-        this.agregarBtn = findViewById(R.id.crear_btn);
         this.adapter = new ArrayAdapter<>(this,android.R.layout.simple_list_item_1, pacientes);
         this.setSupportActionBar(this.toolbar);
         //I___________________________
@@ -76,16 +75,49 @@ public class RegistroDePacienteActivity extends AppCompatActivity {
         ArrayAdapter <String> adapterTipo = new ArrayAdapter<String>(this,
                 android.R.layout.simple_spinner_item, areaTrabajo);
         areaTrabajo_paciente.setAdapter(adapterTipo);
+
+        this.calendarioBtn = findViewById(R.id.calendarioBtn);
+        this.calendarioBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (view == calendarioBtn) {
+                    final Calendar c = Calendar.getInstance();
+                    dia = c.get(Calendar.DAY_OF_MONTH);
+                    mes = c.get(Calendar.MONTH);
+                    anio = c.get(Calendar.YEAR);
+
+                    final Calendar calendario = Calendar.getInstance();
+                    calendario.set(dia, mes, anio);
+
+                    DatePickerDialog datePickerDialog = new DatePickerDialog(view.getContext()
+                            , new DatePickerDialog.OnDateSetListener() {
+                        @Override
+                        public void onDateSet(DatePicker datePicker, int d, int m, int y) {
+                            Calendar calendario = Calendar.getInstance();
+                            calendario.set(d, m, y);
+                            SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
+                            String strDate = format.format(calendario.getTime());
+
+                            calendarioBtn.setText(strDate);
+                        }
+                    }
+                            , anio, mes, dia);
+                    datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis());
+                    datePickerDialog.show();
+                }
+            }
+        });
+
+        this.agregarBtn = findViewById(R.id.crear_btn);
         this.agregarBtn.setOnClickListener(new View.OnClickListener() {
 
-
-            @Override
+        @Override
             public void onClick(View v) {
                 List<String> errores = new ArrayList<>();
                 String nombre = nombre_paciente.getText().toString().trim();
                 String apellido = apellido_paciente.getText().toString().trim();
                 String rut = rut_paciente.getText().toString().trim();
-                String fecha = calendario_paciente.getText().toString();
+                String fecha = calendarioBtn.getText().toString();
                 String temperaturaStr = temperatura_paciente.getText().toString().trim();
                 String areaTrabajo = areaTrabajo_paciente.getSelectedItem().toString();
 
@@ -123,7 +155,7 @@ public class RegistroDePacienteActivity extends AppCompatActivity {
                         p.setNombre(nombre_paciente.getText().toString());
                         p.setApellido(apellido_paciente.getText().toString());
                         p.setRut(rut_paciente.getText().toString());
-                        p.setFechaExamen(calendario_paciente.getText().toString());
+                        p.setFechaExamen(calendarioBtn.getText().toString());
                         p.setAreaTrabajo(areaTrabajo_paciente.getSelectedItem().toString());
                         p.setTemperatura(Float.parseFloat(temperatura_paciente.getText().toString()));
                         p.setPresionArterial(Integer.parseInt(presionArterial_paciente.getText().toString()));
@@ -181,21 +213,5 @@ public class RegistroDePacienteActivity extends AppCompatActivity {
                 .show();
     }
 
-    public void onClick(View v) {
-        if (v == calendario_paciente){
-            final Calendar cal = Calendar.getInstance();
-            dia = cal.get(Calendar.DAY_OF_MONTH);
-            mes = cal.get(Calendar.MONTH);
-            ano = cal.get(Calendar.YEAR);
 
-            DatePickerDialog datePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
-                @Override
-                public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-                    calendario_paciente.setText(dayOfMonth + "/" + (month+1) + "/" + year);
-                }
-            }
-                    ,dia,mes,ano);
-            datePickerDialog.show();
-        }
-    }
 }
