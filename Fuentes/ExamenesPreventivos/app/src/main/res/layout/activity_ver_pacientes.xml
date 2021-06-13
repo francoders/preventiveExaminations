@@ -179,7 +179,7 @@
     </LinearLayout>
 
     <ImageView
-        android:layout_marginTop="@dimen/margin_top"
+        android:layout_marginTop="50dp"
         android:layout_gravity="center"
         android:src="@drawable/ic_alerta_svg"
         android:layout_width="40dp"

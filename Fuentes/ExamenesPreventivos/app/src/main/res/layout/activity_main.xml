@@ -6,15 +6,15 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center_horizontal"
-    android:background="@color/colorPrimary"
+    android:background="@drawable/fondo"
     tools:context=".MainActivity">
 
     <ImageView
-        android:src="@drawable/ic_icon"
-        android:layout_marginTop="@dimen/margin_top"
+        android:src="@drawable/icon"
+        android:layout_marginTop="@dimen/margen_top"
         android:layout_marginBottom="@dimen/margin_bottom"
-        android:layout_width="120dp"
-        android:layout_height="120dp">
+        android:layout_width="110dp"
+        android:layout_height="100dp">
     </ImageView>
 
     <TextView
@@ -65,7 +65,7 @@
         android:id="@+id/inicio_sesion_btn"
         android:text="Iniciar Sesión"
         android:background="@drawable/fondo_buttom"
-        android:layout_marginTop="@dimen/margin_top"
+        android:layout_marginTop="50dp"
         android:layout_gravity="center_horizontal"
         android:textAllCaps="false"
         android:layout_width="@dimen/largo_texto"
@@ -73,7 +73,7 @@
     </Button>
 
     <TextView
-        android:textColor="@color/colorAccent"
+        android:textColor="@color/colorPlomo"
         android:textSize="10dp"
         android:gravity="center_horizontal"
         android:layout_marginTop="150dp"
@@ -82,7 +82,7 @@
         android:layout_height="wrap_content">
     </TextView>
     <TextView
-        android:textColor="@color/colorAccent"
+        android:textColor="@color/colorPlomo"
         android:textSize="10dp"
         android:gravity="center_horizontal"
         android:text="®Corvalán"
