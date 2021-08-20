@@ -54,9 +54,9 @@ public class VerPacientesActivity extends AppCompatActivity {
             this.apellido_paciente.setText(paciente.getApellido());
             this.calendario_registro.setText(paciente.getFechaExamen());
             this.sintoma_paciente.setText(paciente.getSintama());
+            this.presentaTos_paciente.setText(paciente.getPresentaTos());
             this.presionArterial_paciente.setText(""+paciente.getPresionArterial());
             this.temperatura_paciente.setText(""+paciente.getTemperatura());
-            this.presionArterial_paciente.setText(paciente.getPresentaTos());
             this.areaTrabajo_paciente.setText(paciente.getAreaTrabajo());
         }
     }

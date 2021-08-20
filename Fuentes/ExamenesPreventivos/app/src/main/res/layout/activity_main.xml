@@ -10,7 +10,7 @@
     tools:context=".MainActivity">
 
     <ImageView
-        android:src="@drawable/icon"
+        android:src="@drawable/logo"
         android:layout_marginTop="@dimen/margen_top"
         android:layout_marginBottom="@dimen/margin_bottom"
         android:layout_width="110dp"
@@ -58,6 +58,7 @@
         android:drawablePadding="10dp"
         android:paddingLeft="@dimen/margen_left_icon"
         android:inputType="textPassword"
+        android:maxLength="4"
         android:layout_width="@dimen/largo_texto"
         android:layout_height="40dp">
     </EditText>
@@ -76,7 +77,7 @@
         android:textColor="@color/colorPlomo"
         android:textSize="10dp"
         android:gravity="center_horizontal"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="170dp"
         android:text="REGISTRO DE EXAMENES PREVENTIVOS 'COVID' "
         android:layout_width="match_parent"
         android:layout_height="wrap_content">

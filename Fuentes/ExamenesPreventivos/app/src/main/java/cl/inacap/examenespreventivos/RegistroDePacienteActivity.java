@@ -111,7 +111,7 @@ public class RegistroDePacienteActivity extends AppCompatActivity {
         this.agregarBtn = findViewById(R.id.crear_btn);
         this.agregarBtn.setOnClickListener(new View.OnClickListener() {
 
-        @Override
+            @Override
             public void onClick(View v) {
                 List<String> errores = new ArrayList<>();
                 String nombre = nombre_paciente.getText().toString().trim();
@@ -119,32 +119,42 @@ public class RegistroDePacienteActivity extends AppCompatActivity {
                 String rut = rut_paciente.getText().toString().trim();
                 String fecha = calendarioBtn.getText().toString();
                 String temperaturaStr = temperatura_paciente.getText().toString().trim();
+                String precionAteriaStr = presionArterial_paciente.getText().toString().trim();
                 String areaTrabajo = areaTrabajo_paciente.getSelectedItem().toString();
 
 
                 int temperatura = 0;
-                if (nombre.isEmpty()){
+                int precionArt = 0;
+                if (nombre.isEmpty()) {
                     errores.add("Ingrese el nombre");
                 }
-                if (apellido.isEmpty()){
+                if (apellido.isEmpty()) {
                     errores.add("Ingrese el apellido");
                 }
-                if (validaRut(rut)==false){
+                if (validaRut(rut) == false) {
                     errores.add("ingrese el rut");
                 }
-                if (fecha.isEmpty()){
+                if (fecha.isEmpty()) {
                     errores.add("fecha valida");
+                }
+                try {
+                    precionArt = Integer.parseInt(precionAteriaStr);
+                    if (precionArt < 60) {
+                        throw new NumberFormatException();
+                    }
+                } catch (NumberFormatException ex) {
+                    errores.add("Falta Precion Arterial");
                 }
 
                 try {
                     temperatura = Integer.parseInt(temperaturaStr);
-                    if (temperatura<20){
+                    if (temperatura < 20) {
                         throw new NumberFormatException();
                     }
-                }catch (NumberFormatException ex){
+                } catch (NumberFormatException ex) {
                     errores.add("Falta temperatura");
                 }
-                if (areaTrabajo.equals("Seleccione uno")){
+                if (areaTrabajo.equals("Seleccione uno")) {
                     errores.add(" Debe seleccionar: ");
                 }
 
@@ -162,7 +172,6 @@ public class RegistroDePacienteActivity extends AppCompatActivity {
                         p.setSintama(sintoma_paciente.getText().toString());
                         p.setPresentaTos(presentaTos_paciente.getText().toString());
 
-
                         if(sintoma_paciente.isChecked()){
                             p.setSintama("Si");
                         }else{
@@ -173,6 +182,7 @@ public class RegistroDePacienteActivity extends AppCompatActivity {
                         }else{
                             p.setPresentaTos("No");
                         }
+
                         pacientesDAO.save(p);
                         startActivity(new Intent(RegistroDePacienteActivity.this, PrincipalActivity.class));
                     }else{

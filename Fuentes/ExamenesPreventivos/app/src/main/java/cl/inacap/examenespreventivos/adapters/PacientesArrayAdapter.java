@@ -31,10 +31,11 @@ public class PacientesArrayAdapter extends ArrayAdapter<Paciente> {
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         LayoutInflater inflater = this.activity.getLayoutInflater();
         View fila = inflater.inflate(R.layout.pacientes_list, null, true);
-        ImageView imagenVie = fila.findViewById(R.id.imagen_sintoma_lv);
         TextView nombreTv = fila.findViewById(R.id.nombre_lv);
+        TextView apellidoTv = fila.findViewById(R.id.apellido_lv);
         Paciente actual = pacientes.get(position);
         nombreTv.setText(actual.getNombre());
+        apellidoTv.setText(actual.getApellido());
         return fila;
     }
 }

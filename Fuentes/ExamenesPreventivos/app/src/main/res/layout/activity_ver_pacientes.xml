@@ -168,10 +168,12 @@
         android:layout_height="wrap_content">
         <TextView
             android:text="Presion Arterial: "
+            android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
         </TextView>
         <TextView
+            android:layout_weight="1"
             android:id="@+id/presionArterialPaciente"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
