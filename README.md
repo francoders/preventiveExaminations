@@ -1,6 +1,6 @@
 ## Examenes Preventivos 
 Aplicación Android que permite llevar un registro de exámenes de COVID19 efectuados por terceros. <br>
-EV3 - Android Studio
+EV3 - POO, sqlite y JAVA Android Studio
 
 Version 0.0.23 <br>
 Correccion de errores
